@@ -1,7 +1,7 @@
 package template_method;
 
 // AbstractClass
-abstract class BeveragePreparation {
+public abstract class BeveragePreparation {
   // Template method
   public final void prepareBeverage() {
     boilWater();
@@ -20,6 +20,6 @@ abstract class BeveragePreparation {
   }
 
   // Abstract steps to be implemented by subclasses
-  protected abstract void brew();
-  protected abstract void addCondiments();
+  public abstract void brew();
+  public abstract void addCondiments();
 }

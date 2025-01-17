@@ -1,14 +1,14 @@
 package template_method;
 
 // ConcreteClass 2: Coffee Preparation
-class CoffeePreparation extends BeveragePreparation {
+public class CoffeePreparation extends BeveragePreparation {
   @Override
-  protected void brew() {
+  public void brew() {
     System.out.println("Brewing the coffee...");
   }
 
   @Override
-  protected void addCondiments() {
+  public void addCondiments() {
     System.out.println("Adding sugar and milk...");
   }
 }

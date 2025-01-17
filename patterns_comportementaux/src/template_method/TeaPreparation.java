@@ -1,14 +1,14 @@
 package template_method;
 
 // ConcreteClass 1: Tea Preparation
-class TeaPreparation extends BeveragePreparation {
+public class TeaPreparation extends BeveragePreparation {
   @Override
-  protected void brew() {
+  public void brew() {
     System.out.println("Steeping the tea...");
   }
 
   @Override
-  protected void addCondiments() {
+  public void addCondiments() {
     System.out.println("Adding lemon...");
   }
 }

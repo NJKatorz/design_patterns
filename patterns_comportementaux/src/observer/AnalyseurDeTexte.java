@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
+// Subject
 public class AnalyseurDeTexte implements AnalyseurDeTxt{
 	List<Observer> observers = new ArrayList<>();
 

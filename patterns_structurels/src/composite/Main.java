@@ -1,13 +1,14 @@
 package composite;
 
+
 public class Main {
   public static void main(String[] args) {
     // Leaves (files)
-    FileTxt file1 = new FileTxt("file1.txt");
-    FileTxt file2 = new FileTxt("file2.txt");
-    FileTxt file3 = new FileTxt("file3.txt");
-    FileJson file4 = new FileJson("file4.json");
-    FileJson file5 = new FileJson("file5.json");
+    File file1 = new FileTxt("file1");
+    File file2 = new FileTxt("file2");
+    File file3 = new FileTxt("file3");
+    File file4 = new FileJson("file4");
+    File file5 = new FileJson("file5");
 
     // Composite (directories)
     Directory directory1 = new Directory("Folder1");

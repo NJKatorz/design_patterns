@@ -11,7 +11,7 @@ public class FileJson implements File {
   // + operation()
   @Override
   public void showDetails() {
-    System.out.println("File: " + name);
+    System.out.println("File: " + name + ".json");
   }
 }
 

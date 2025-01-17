@@ -1,6 +1,6 @@
 package observer;
 
-// Subject
+// Subject (interface)
 public interface AnalyseurDeTxt {
   void addObservateur(Observer obs);
 
