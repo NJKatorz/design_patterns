@@ -1,5 +1,6 @@
 package visitor;
 
+// ConcreteVisitor
 public class XMLExportVisitor implements Visitor {
 
   public String export(Shape shape) {

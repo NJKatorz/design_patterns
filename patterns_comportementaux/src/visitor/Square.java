@@ -1,6 +1,6 @@
 package visitor;
 
-// ProductA1
+// ConcreteElement1
 public class Square implements Shape {
   private final double size;
   private final Point center;

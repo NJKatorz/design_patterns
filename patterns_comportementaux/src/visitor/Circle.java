@@ -1,5 +1,6 @@
 package visitor;
 
+// ConcreteElement3
 public class Circle implements Shape {
 	private Point center;
 	private double radius;

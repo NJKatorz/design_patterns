@@ -1,7 +1,10 @@
 package state;
 
+// Context
 public class Bear {
+  // State
   public enum State {
+    // ConcreteState1
     NOT_SLEEPING {
       @Override
       public void attack(Bear b) {
@@ -12,7 +15,9 @@ public class Bear {
       public void wakeup(Bear b) {
         throw new RuntimeException("already not sleeping");
       }
-    }, SLEEPING {
+    },
+    // ConcreteState2
+    SLEEPING {
       @Override
       public void attack(Bear b) {
         System.out.println("Zzzzzz");

@@ -3,6 +3,7 @@ package visitor;
 import java.util.ArrayList;
 import java.util.List;
 
+// ConcreteElement2
 public class CompoundShape implements Shape {
   private List<Shape> shapes = new ArrayList<>();
 
