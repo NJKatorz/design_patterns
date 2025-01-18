@@ -1,29 +1,21 @@
 package flyweight;
 
-import java.util.ArrayList;
-import java.util.List;
-
-// Client
 public class Main {
   public static void main(String[] args) {
-    ChessPieceFlyweightFactory factory = new ChessPieceFlyweightFactory();
+    EnnemiFactory factory = new EnnemiFactory();
 
-    // Flyweights partagés
-    ChessPiece whitePawn = factory.getChessPiece("Pawn", "White");
-    ChessPiece blackPawn = factory.getChessPiece("Pawn", "Black");
-    ChessPiece whiteKing = factory.getChessPiece("King", "White");
+    // Création ou récupération des Flyweights
+    Ennemi zombieClassique = factory.getEnnemi("Zombie classique", "Sprite1", 100);
+    Ennemi zombieRapide = factory.getEnnemi("Zombie rapide", "Sprite2", 150);
 
-    // Ligne de pions blancs (Unshared Flyweight)
-    List<ChessPiece> rowPieces = new ArrayList<>();
-    for (int i = 0; i < 8; i++) {
-      rowPieces.add(whitePawn); // Partage du même Flyweight
-    }
-    ChessRow whitePawnRow = new ChessRow(rowPieces, 2);
+    // Position extrinsèque (non partagée)
+    Position position1 = new Position(10, 20);
+    Position position2 = new Position(30, 40);
+    Position position3 = new Position(50, 60);
 
-    // Placement des pièces
-    whitePawn.placePiece(2, 1);  // Flyweight partagé
-    blackPawn.placePiece(7, 1);  // Flyweight partagé
-    whiteKing.placePiece(1, 5);  // Flyweight partagé
-    whitePawnRow.placePiece(2, 0); // Unshared Flyweight
+    // Affichage des ennemis avec des états extrinsèques différents
+    zombieClassique.afficher(position1);
+    zombieRapide.afficher(position2);
+    zombieClassique.afficher(position3);
   }
 }
